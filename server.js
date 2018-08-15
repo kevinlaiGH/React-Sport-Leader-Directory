@@ -9,7 +9,7 @@ const posts = require("./routes/api/posts");
 
 const app = express();
 
-//Body parser middleware
+// Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -29,7 +29,7 @@ mongoose
 app.use(passport.initialize());
 
 // Passport Config
-require("./config/passport.js")(passport);
+require("./config/passport")(passport);
 
 // Use Routes
 app.use("/api/users", users);
